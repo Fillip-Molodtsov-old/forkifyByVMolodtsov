@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600');
+$gradient:linear-gradient(to left, #dfe477, #ffbc79, #fd9e97, #d690b1, #9e8bb4);
+$gradient-dark:linear-gradient(to left, #b9bd65, #cf9862, #c47b75, #9f6b83, #6f627e);
+$grad-black:linear-gradient(135deg, rgba(0, 0, 0, .4) 0%,rgba(0, 0, 0, .4) 100%);
+
+$face:#ff0080;
+$face-description:rgb(0, 238, 255);
+$gray:#f3f3f3;
+$gray1:#353535;
+$gray2:#7a7a7a;
+$gray3:rgb(209, 209, 209);
+$red-l:rgb(255, 59, 59);
+$red-d:rgb(148, 43, 43);
+$orange:rgb(255, 157, 45);
+$black04:rgba(0,0,0,.4);
+$header-size:60px;
+$h-l-h:100px;
+ @mixin respond-to($media) {
+  @if $media == phones {
+    @media only screen and (min-width: 320px) and (max-width: 480px) { @content; }
+  }
+  @else if $media == wide-phones {
+    @media all and (min-width: 480px) and (max-width: 768px) { @content; }
+  }
+  @else if $media == tablets {
+    @media all and (min-width: 768px) and (max-width: 992px) { @content; }
+  }
+  @else if $media == small-desktops {
+    @media all and (min-width: 992px) and (max-width: 1200px) { @content; }
+  }
+  @else if $media == lg-desktops {
+    @media all and (min-width: 1200px) and (max-width: 1441px) { @content; }
+  }
+  @else if $media == mlg-desktops {
+    @media all and (min-width: 1441px) and (max-width: 1599px) { @content; }
+  }
+  @else if $media == xlg-desktops {
+    @media all and (min-width: 1600px) and (max-width: 1980px) { @content; }
+  }
+  @else if $media == xxlg-desktops{
+  	@media all and (min-width:1981px) { @content; }
+  }
+  @if $media == lvl-1{
+    @media only screen and (min-width: 1441px) { @content; }
+  }
+  @if $media == lvl0{
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+  @if $media == lvl1{
+    @media only screen and (max-width: 1200px) { @content; }
+  }
+  @if $media == lvl2{
+    @media only screen and (max-width: 992px) { @content; }
+  }
+  @if $media == lvl3{
+    @media only screen and (max-width: 768px) { @content; }
+  }
+}
